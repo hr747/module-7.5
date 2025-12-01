@@ -16,26 +16,31 @@ int main()
         {
             cin >> a[i];
         }
-         int count_odd = 0;
-    int count_even = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (a[i]%2==0)
+        int count_odd = 0;
+        int count_even = 0;
+        for (int i = 0; i < n; i++)
         {
-            count_even++;
+            if (a[i] % 2 == 0)
+            {
+                count_even++;
+            }
+            else
+            {
+                count_odd++;
+            }
+        }
+        int opration = 0;
+        if (count_even == count_odd)
+        {
+            cout << opration << endl;
+        }
+        else if (n % 2 == 1)
+        {
+            cout << "-1" << endl;
         }
         else
-        {
-            count_odd++;
-        }
+            cout << abs(count_even - count_odd) / 2 << endl;
     }
-    int opration=0;
-    if(count_even==count_odd)
-    {
-        return 0;
-    }
-    }
-   
 
     return 0;
 }
